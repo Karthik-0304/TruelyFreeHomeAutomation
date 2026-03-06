@@ -1,4 +1,4 @@
-QA Automation Assessment – End-to-End User Flow
+## QA Automation Assessment – End-to-End User Flow
 
 ##1. Project Overview
 
