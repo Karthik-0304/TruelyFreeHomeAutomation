@@ -1,6 +1,6 @@
 ## QA Automation Assessment – End-to-End User Flow
 
-##1. Project Overview
+## 1. Project Overview
 
 This project automates an **End-to-End user flow** for the TFM Web Application.
 
