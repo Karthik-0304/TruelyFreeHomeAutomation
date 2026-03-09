@@ -77,8 +77,8 @@ public class Locators {
 	
 	public static final By PALCEORDER_BTN_BY=By.xpath("//button[@type='button' and contains(text(),'Place Your Order')]");
 	
-	//public static final By LAST_NAME_BY2=By.id("lastName");
+	public static By PROFILE_BTN = By.id("profileBtn");
 	
-	
+	public static By LOGOUT_BTN = By.id("logoutBtn");
 	
 }
