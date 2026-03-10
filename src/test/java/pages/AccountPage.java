@@ -15,17 +15,25 @@ public class AccountPage extends BaseClass {
 
 	public void logout(){
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	    Actions actions = new Actions(driver);
 
 	    WebElement profile = wait.until(
-	        ExpectedConditions.visibilityOfElementLocated(Locators.PROFILE_BTN));
+	        ExpectedConditions.visibilityOf(driver.findElement(Locators.PROFILE_BTN)));
 
-	    actions.moveToElement(profile).perform();
+	    actions.moveToElement(profile).build().perform();
+	    
+//	    WebElement movetoElement=wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.toscrollBy));
+//	    actions.moveToElement(movetoElement).build().perform();
 
 	    WebElement logout = wait.until(
 	        ExpectedConditions.elementToBeClickable(Locators.LOGOUT_BTN));
 
 	    actions.moveToElement(logout).click().perform();
+	    
+	    WebElement logoutbtn = wait.until(
+		        ExpectedConditions.elementToBeClickable(Locators.logoutBy));
+	    
+	    actions.moveToElement(logoutbtn).click().perform();
 	}
 }

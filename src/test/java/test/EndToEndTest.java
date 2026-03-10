@@ -12,49 +12,48 @@ import pages.LoginPage;
 import pages.PaymentPage;
 import pages.ProductPage;
 import utils.TestListener;
-@Listeners(TestListener.class)
+
 public class EndToEndTest extends BaseClass {
 
-    String productName = "COOFANDY Mens Muscle";
+	String productName = "Hanes Men's Beefy-t T-Shirt";
 
-    @Test
-    public void completeFlow() throws InterruptedException {
+	@Test
+	public void completeFlow() throws InterruptedException {
 
-        LoginPage login = new LoginPage();
-        BrandPage brand = new BrandPage();
-        ProductPage product = new ProductPage();
-        CartPage cart = new CartPage();
-        CheckoutPage checkout = new CheckoutPage();
-        PaymentPage payment = new PaymentPage();
-        AccountPage account = new AccountPage();
+		LoginPage login = new LoginPage();
+		BrandPage brand = new BrandPage();
+		ProductPage product = new ProductPage();
+		CartPage cart = new CartPage();
+		CheckoutPage checkout = new CheckoutPage();
+		PaymentPage payment = new PaymentPage();
+		AccountPage account = new AccountPage();
 
-        login.loginUser();
+		login.loginUser();
 
-        brand.selectBrand();
+		brand.selectBrand();
 
-        product.selectProduct(productName);
+		product.selectProduct(productName);
 
-        product.addToCart();
+		product.addToCart();
 
-        cart.openCart();
+		cart.openCart();
 
-        try {
+		try {
 
-            checkout.checkout();
-            checkout.Address();
-            payment.makePayment();
+			checkout.checkout();
+			checkout.Address();
+			payment.makePayment();
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            System.out.println("Error occurred during checkout/payment: " + e.getMessage());
-            e.printStackTrace();
+			System.out.println("Error occurred during checkout/payment: " + e.getMessage());
+			e.printStackTrace();
 
-        } finally {
+		} finally {
 
-            payment.placepayment();
-            account.logout();
-        }
+			payment.placepayment();
+			account.logout();
+		}
 
-        
-    }
+	}
 }

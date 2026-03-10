@@ -18,6 +18,11 @@ public class ScreenshotUtil {
 
         String path = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
 
+        File folder = new File(System.getProperty("user.dir") + "/screenshots/");
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
         File dest = new File(path);
 
         try {
@@ -28,5 +33,4 @@ public class ScreenshotUtil {
 
         return path;
     }
-
 }
