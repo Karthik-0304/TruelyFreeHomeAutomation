@@ -183,12 +183,3 @@ These screenshots help identify the cause of failures quickly.
 - Modular and reusable utilities
 - Maven-based project structure
 
----
-
-# 🔮 Future Enhancements
-
-- Data-driven testing using external files (Excel/JSON)
-- Cross-browser testing support
-- Parallel test execution
-- CI/CD integration using Jenkins or GitHub Actions
-- Docker-based test execution
